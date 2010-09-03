@@ -11,7 +11,7 @@
 
     <scm>
         <connection>scm:git:git://github.com/sarnowski/php-parent.git</connection>
-        <developerConnection>scm:git:git@github.com:sarnowski/php-parent.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:sarnowski/php-parent.git</developerConnection>
     </scm>
 
     <dependencies>
