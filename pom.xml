@@ -7,6 +7,8 @@
 
     <packaging>pom</packaging>
 
+    <name>php-parent</name>
+
     <scm>
         <connection>scm:git:git://github.com/sarnowski/php-parent.git</connection>
         <developerConnection>scm:git:git@github.com:sarnowski/php-parent.git</developerConnection>
@@ -20,6 +22,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>localgithub</id>
+            <name>Local github.com release folder</name>
+            <url>file://${user.home}/github/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>localgithub</id>
+            <name>Local github.com snapshot folder</name>
+            <url>file://${user.home}/github/maven2</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
@@ -78,8 +93,6 @@
             </plugin>
         </plugins>
     </reporting>
-
-
 
     <repositories>
         <repository>
