@@ -15,6 +15,11 @@
 
     <name>php-parent</name>
 
+    <scm>
+        <connection>scm:git:git://github.com/sarnowski/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:git@github.com:sarnowski/${project.artifactId}.git</developerConnection>
+    </scm>
+
     <dependencies>
         <dependency>
             <groupId>org.phpunit</groupId>
@@ -29,7 +34,7 @@
             <plugin>
                 <groupId>org.phpmaven</groupId>
                 <artifactId>maven-php-plugin</artifactId>
-                <version>1.1-SNAPSHOT</version>
+                <version>0.2.0-mpp2</version>
                 <extensions>true</extensions>
             </plugin>
 
@@ -69,7 +74,7 @@
             <plugin>
                 <groupId>org.phpmaven</groupId>
                 <artifactId>maven-php-plugin</artifactId>
-                <version>1.1-SNAPSHOT</version>
+                <version>0.2.0-mpp2</version>
                 <reportSets>
                     <reportSet>
                         <reports>
