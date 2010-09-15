@@ -50,13 +50,6 @@
                             <goal>test</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>php-site</id>
-                        <phase>site</phase>
-                        <goals>
-                            <goal>phpdocumentor</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
 
