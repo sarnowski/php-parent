@@ -88,6 +88,11 @@
 
     <repositories>
         <repository>
+            <id>sarnowski.github.com</id>
+            <name>Tobias Sarnowski's Maven Repository</name>
+            <url>http://sarnowski.github.com/repository</url>
+        </repository>
+        <repository>
             <id>release-repo1.php-maven.org</id>
             <name>PHP-Maven 2 Release Repository</name>
             <url>http://repo1.php-maven.org/release</url>
@@ -109,6 +114,11 @@
     </repositories>
 
     <pluginRepositories>
+        <pluginRepository>
+            <id>sarnowski.github.com</id>
+            <name>Tobias Sarnowski's Maven Repository</name>
+            <url>http://sarnowski.github.com/repository</url>
+        </pluginRepository>
         <pluginRepository>
             <id>release-repo1.php-maven.org</id>
             <name>PHP-Maven 2 Release Repository</name>
