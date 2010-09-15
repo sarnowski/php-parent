@@ -35,7 +35,29 @@
                 <groupId>org.phpmaven</groupId>
                 <artifactId>maven-php-plugin</artifactId>
                 <version>0.2.0-mpp2</version>
-                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>php-process</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>php-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>php-site</id>
+                        <phase>site</phase>
+                        <goals>
+                            <goal>phpdocumentor</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
@@ -96,20 +118,6 @@
             <id>release-repo1.php-maven.org</id>
             <name>PHP-Maven 2 Release Repository</name>
             <url>http://repo1.php-maven.org/release</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>snapshot-repo1.php-maven.org</id>
-            <name>PHP-Maven 2 Snapshot Repository</name>
-            <url>http://repo1.php-maven.org/snapshot</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
         </repository>
     </repositories>
 
@@ -123,20 +131,6 @@
             <id>release-repo1.php-maven.org</id>
             <name>PHP-Maven 2 Release Repository</name>
             <url>http://repo1.php-maven.org/release</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </pluginRepository>
-        <pluginRepository>
-            <id>snapshot-repo1.php-maven.org</id>
-            <name>PHP-Maven 2 Snapshot Repository</name>
-            <url>http://repo1.php-maven.org/snapshot</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
         </pluginRepository>
     </pluginRepositories>
 
