@@ -1,18 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.onsteroids.php</groupId>
-    <artifactId>parent</artifactId>
+    <parent>
+        <groupId>com.github.sarnowski</groupId>
+        <artifactId>github-parent</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
+    <groupId>com.github.sarnowski</groupId>
+    <artifactId>php-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
     <name>php-parent</name>
-
-    <scm>
-        <connection>scm:git:git://github.com/sarnowski/php-parent.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/sarnowski/php-parent.git</developerConnection>
-    </scm>
 
     <dependencies>
         <dependency>
@@ -22,19 +23,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>localgithub</id>
-            <name>Local github.com release folder</name>
-            <url>file://${user.home}/github/maven2</url>
-        </repository>
-        <snapshotRepository>
-            <id>localgithub</id>
-            <name>Local github.com snapshot folder</name>
-            <url>file://${user.home}/github/maven2</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <build>
         <plugins>
@@ -81,11 +69,10 @@
             <plugin>
                 <groupId>org.phpmaven</groupId>
                 <artifactId>maven-php-plugin</artifactId>
-                <version>1.0</version>
+                <version>1.1-SNAPSHOT</version>
                 <reportSets>
                     <reportSet>
                         <reports>
-                            <report>doxygen</report>
                             <report>phpdocumentor</report>
                         </reports>
                     </reportSet>
